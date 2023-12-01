@@ -5,8 +5,7 @@ from io import BytesIO
 # Change this line
 import PyPDF2
 
-# To this line
-import fitz  # This is the PyMuPDF library
+
 
 
 openai.api_key = "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"
