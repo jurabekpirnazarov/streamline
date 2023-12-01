@@ -2,6 +2,12 @@ import PyPDF2
 import openai
 import streamlit as st
 from io import BytesIO
+# Change this line
+import PyPDF2
+
+# To this line
+import fitz  # This is the PyMuPDF library
+
 
 openai.api_key = "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"
 TEMPLATE = """
@@ -67,15 +73,15 @@ def chatgpt(text):
 
 def read_pdf(pdf_file):
     text = ""
-
+    # Change this line
     pdf_reader = PyPDF2.PdfFileReader(pdf_file)
-    num_pages = pdf_reader.numPages
 
-    for page_num in range(num_pages):
-        page = pdf_reader.getPage(page_num)
-        text += page.extractText()
+# To this line
+    pdf_document = fitz.open(pdf_file)
 
-    return text
+
+
+    return pdf_document
 
 def main():
     st.title("PDF Reader App")
