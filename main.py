@@ -90,7 +90,7 @@ def main():
 
     if uploaded_file is not None:
         # Read the PDF file
-        pdf_text = read_pdf(uploaded_file)
+        pdf_text = ""
 
 
 
@@ -98,7 +98,7 @@ def main():
 
 
 
-        response = chatgpt(pdf_text)
+        response = chatgpt("PDF Reader App")
         st.markdown("# Summarization")
         st.text_area("Response:", value=response, height=300)
 
