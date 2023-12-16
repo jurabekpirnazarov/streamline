@@ -85,8 +85,7 @@ def read_pdf(pdf_file):
 def main():
     st.title("PDF Reader App")
 
-    uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
-    st.title("Text File Reader App")
+    st.text_area("Contents", text_contents)
 
     uploaded_file = st.file_uploader("Choose a text file", type=["txt"])
 
