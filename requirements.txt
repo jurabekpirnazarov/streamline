@@ -2,3 +2,4 @@ streamlit
 openai
 PyPDF2==1.26.0 
 pymupdf==1.18.16  # Use the latest version available
+pip install openai==0.28
