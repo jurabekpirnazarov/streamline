@@ -86,6 +86,15 @@ def main():
     st.title("PDF Reader App")
 
     uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
+    st.title("Text File Reader App")
+
+    uploaded_file = st.file_uploader("Choose a text file", type=["txt"])
+
+    if uploaded_file is not None:
+        st.subheader("File Content:")
+        text_contents = uploaded_file.read()
+        st.text_area("Contents", text_contents)
+  
 
     if uploaded_file is not None:
         # Read the PDF file
